@@ -42,9 +42,17 @@
   border-radius: 10px;
 }
 
+button {
+  width: 40%;
+  margin: 2px;
+  border: 1px solid #666666;
+}
+
 img {
   width: 90%;
   margin: auto;
+  background-color: whitesmoke;
+  border-radius: 12px;;
 }
 
 @keyframes logo-spin {
