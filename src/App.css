@@ -42,6 +42,15 @@
   border-radius: 10px;
 }
 
+.navbar{
+  display: flex;
+  flex-direction: column;
+}
+
+/* .pokemonBox{
+  display: flex;
+} */
+
 button {
   width: 40%;
   margin: 2px;
