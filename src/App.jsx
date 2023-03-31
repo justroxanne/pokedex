@@ -2,6 +2,7 @@ import './App.css'
 import PokemonCard from "./components/PokemonCard"
 import { useState } from 'react';
 import NavBar from './components/NavBar';
+import {useEffect} from 'react';
 
 const pokemonList = [
   {
@@ -35,7 +36,16 @@ const pokemonList = [
   ]; 
 
 function App() {
+  useEffect(
+    () => {
+      alert('Hello pokemon trainer ! ٩(◕‿◕｡)۶');
+    },
+    []
+  );
+
   const [pokemonIndex, setPokemonIndex] = useState(0);
+
+  pokemonList[pokemonIndex].name === 'pikachu' ? alert('Pika pikachuuu !!') : "";
 
   return (<div className="pokemonBox">
     <div className="pokeball">
@@ -43,7 +53,7 @@ function App() {
     </div>
     <div className="navbar">
       {pokemonList.map((pokemonIndex, index) =>
-      <NavBar setPokemonIndex={setPokemonIndex} pokemonIndex={pokemonIndex} index={index}/>
+      <NavBar key={pokemonIndex.name} setPokemonIndex={setPokemonIndex} pokemonIndex={pokemonIndex} index={index}/>
       )}
     </div>
     </div>

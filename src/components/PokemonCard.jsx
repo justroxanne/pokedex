@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
+import './stylesPokemonCards.css';
 
 function PokemonCard({pokemon}) {
     console.log(pokemon.imgSrc);
     return (
-        <figure className="pokemon_card" >
+        <figure className={`pokemon_card ${pokemon.type}`} >
             { pokemon.imgSrc ?
             <img src={pokemon.imgSrc} alt={pokemon.name} />
             :<p>???</p>
